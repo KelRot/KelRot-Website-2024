@@ -10,36 +10,63 @@ function closeNav() {
   console.log("closed")
 }
 
+/* SLIDESHOW ------------------------------------------------------------------------------*/
+let slideIndex = 1;
+showSlides(slideIndex);
 
-/*slide show on the home page*/
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    let slides = document.getElementsByClassName("slides");
-    
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    
-    slideIndex++;
-    
-    if (slideIndex > slides.length) { 
-        slideIndex = 1;
-    }
-    
-    slides[slideIndex - 1].style.display = "block";
-    
-    setTimeout(showSlides, 5000); // Change image every 2 seconds
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+  resetInterval();
 }
 
-function changeSlide(n) {
-    showSlides(slideIndex += n);
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+  resetInterval();
 }
 
-/* FIX THE FUCKING ARROWS AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
 
-// Countdown timer JavaScript code
+// Automatic slideshow
+function autoSlides() {
+  plusSlides(1);
+}
+
+// Set the interval for the automatic slideshow
+let slideInterval = setInterval(autoSlides, 4000);
+
+// Pause the automatic slideshow on mouseover
+document.querySelector('.slideshow-container').addEventListener('mouseover', function() {
+  clearInterval(slideInterval);
+});
+
+// Resume the automatic slideshow on mouseout
+document.querySelector('.slideshow-container').addEventListener('mouseout', function() {
+  slideInterval = setInterval(autoSlides, 4000);
+});
+
+// Reset the interval for manual controls
+function resetInterval() {
+  clearInterval(slideInterval);
+  slideInterval = setInterval(autoSlides, 4000);
+}
+
+// Countdown timer JavaScript code ------------------------------------------------------------------------
 const targetDate = new Date("January 4, 2025 00:00:00").getTime();
 
 const countdownElement = document.getElementById('countdown');
