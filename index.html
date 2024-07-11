@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelrot 5655</title>
+
+    <!--ICONS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<!--CSS LINKS-->
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/home.css">
+
+<body>
+
+    <div class = "topnav" id="myTopnav">
+        <a href="index.html" class ="logo-container">
+            <img src="images/logo.png" alt="Home" class="logo"> <!--logo container-->
+        </a> 
+
+        <a href="about.html">Hakkımızda</a>
+        <a href="team.html">Takım</a> 
+        <a href="seasons.html">Sezonlar</a>
+        <a href="sponsors.html">Sponsorlar</a>
+        <a href="sources.html">Kaynaklar</a>
+        <a href="support.html" class="supportButton">Destek Ol</a>
+        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+          </a>  
+        
+    </div>
+
+    <div id="myNav" class="overlay">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <div class="overlayContent">
+            <a href="about.html">Hakkımızda</a>
+            <a href="team.html">Takım</a> 
+            <a href="seasons.html">Sezonlar</a>
+            <a href="sponsors.html">Sponsorlar</a>
+            <a href="sources.html">Kaynaklar</a>
+            <a href="support.html" class="supportButton">Destek Ol</a>
+        </div>
+    </div>
+<!--COMMON HTML  ANVIGATON CODES ABOVE ^ ------------------------------------------------------------------------->
+
+
+
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <img src="images/robotkapak.jpg" alt="Slide 1">
+        </div>
+        <div class="slides fade">
+            <img src="images/filler1.png" alt="Slide 2">
+        </div>
+        <div class="slides fade">
+            <img src="images/filler2.png" alt="Slide 3">
+        </div>
+        <div class="slides fade">
+            <img src="images/filler3.png" alt="Slide 4">
+        </div>
+
+        <!-- Navigation arrows -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <div class="logoLine">
+        <img src="images/frclogo.png" alt="frc logo">
+    </div>
+
+    <div class="columns">
+        <div class="column">
+            <img src="images/img01.JPG" alt="Image 1">
+            <h3>FRC nedir?</h2>
+            <p>yazı gelecek</p>
+    
+        </div>
+    
+        <div class="column">
+            <img src="images/img02.jpg" alt="Image 2">
+            <h3>KelRot kimdir?</h2>
+            <p>yazı gelecek</p>
+    
+        </div>
+    </div>
+
+
+<!--COMMON HTML BOTTOM CODE BELOW V ------------------------------------------------------------------------->
+    <div class="bottom">
+        <div class="items">
+            <div class="media-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="media-item-text">
+                    <p>Çırağan Caddesi No:40</p>
+                    <p>Ortaköy 34349 Beşiktaş / İstanbul -0212 259 91 12</p>
+                    <p>Kabataş Erkek Lisesi</p>
+                </div>
+                
+            </div>
+            <div class="media-item">
+                <i class="fab fa-instagram"></i>
+                <p>@kelrot5655</p>
+            </div>
+            <div class="media-item">
+                <i class="fab fa-tiktok"></i>
+                <p>@kelrot5655</p>
+            </div>
+        </div>
+        
+        <div class="elmocontainer">
+            <img src="images/elmoo.png" alt="elmo" class="bottomelmo">
+        </div>
+        
+    </div>
+    
+    <script src="js/scripts.js"></script>
+</body>
+</html>

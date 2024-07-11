@@ -1,0 +1,174 @@
+/* HOME HEADER --------------------------------------------------------------------*/
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 400px; /* Set the height you want for the slideshow */
+    margin: auto;
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+
+/* Hide all slides by default */
+.slides {
+    display: none;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+/* Fade animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navigation arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+
+ @media  screen and (max-width:600px) {
+    .header {
+        position: static; /* Change to static for small screens */  
+        text-align: center;
+        margin-top: 60px; /* Adjust top margin */
+        left: 0; /* Reset left position */
+        top: 0; /* Reset top position */
+    }
+    .header1 {
+        font-size: 2.5em; /* Adjust font size for small screens */
+    }
+    .header2 {
+        font-size: 1.5em; /* Adjust font size for small screens */
+    }
+    
+ }
+
+ .kapak img{
+    width: 100%;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+
+/*  frc logo slicer*/
+.logoLine{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    background-color: #080808;
+ 
+}
+.logoLine img{
+    height: 30px;
+    width: auto;
+    position: absolute;
+    left: 50%;
+     transform: translateX(-50%);
+}
+
+@media screen and (max-width:600px) {
+
+    .logoLine{
+        height: 20px;
+    }
+
+    .logoLine img {
+        height: 17px;   
+    }
+    
+}
+
+ /* HOME COLUMNS*/
+ .columns {
+    width: 100%; /* Adjust the width of each column */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    background-color: #272727;
+
+}
+.column {
+    width: 30%; /* Adjust the width of each column */
+    margin: 60px;
+    box-sizing: border-box;
+    text-align: center; /* Center align text inside each column */
+}
+
+.column img {
+    width: 90%; /* Ensure the image fills the column width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.column h3 {
+    font-size: 3em;
+    margin-top: 10px;
+    color: #ededed;
+    font-weight: 500;
+}
+
+.column p {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    color: #ededed;
+}
+
+@media screen and (max-width:600px){
+    .column {
+        margin: 30px;
+        width: 100%;
+    }
+    .column h3 {
+        font-size: 2.5em;
+    }
+    .column p {
+        font-size: 1.3em;
+    }
+    .columns {
+        gap: 10px;
+    }
+}

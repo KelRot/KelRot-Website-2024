@@ -1,0 +1,190 @@
+/*BODY ---------------------------------------------------------------------------- */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Saira Extra Condensed',sans-serif;
+    background-color: #080808;
+    
+}
+
+/*NAVIGATION -----------------------------------------------------------------------*/
+.topnav{
+    background-color: #ededed;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top:0;
+    width: 100%;
+}
+
+.topnav a{
+    float: right;
+    color: #080808;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Iceland',sans-serif;
+    font-weight: 600;
+}
+
+.topnav a:hover{
+    background-color: #272727;
+    color: #ededed;
+    
+}
+
+.topnav a.active{
+    background-color: #8F0b13;
+    color: #ededed;
+}
+
+.topnav a:first-child {
+    margin-right: auto; /* Push the first item to the left */
+}
+
+.topnav .icon {
+    display: none; /*hide the menu link*/
+  }
+
+.topnav .supportButton {
+    color: #8F0b13;
+}
+
+.logo {
+    width: 80px; /* Adjust the width of logo*/
+    height: auto; 
+}
+
+.logo-container {
+    position: absolute; /* Position the container absolutely within the navigation bar */
+    left: 10px; /* Adjust the left position as needed */
+    top: 50%; /* Position the container vertically in the middle of the navigation bar */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+}
+
+
+
+
+@media screen and (max-width: 750px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+}
+
+/*CURTAIN MENU */
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.92); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; 
+}
+
+.overlayContent {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Saira Extra Condensed',sans-serif;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #838383;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s;    
+    
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;    
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+
+/*BOTTOM SECTION*/
+.bottom {
+    text-align: center;
+    background-color: #ededed; /* Background color of the media section */
+    padding-top: 20px;
+    color: #080808; /* Text color */
+    height: 100%;
+    font-family: 'Saira Extra Condensed', sans-serif;
+
+}
+
+.media-item-text{
+    display: block;
+}
+
+.media-item-text p{
+    margin: 0;
+    margin-bottom: 5px;
+    margin-left: 15px
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+    gap: 60px; /* Space between media items */
+    margin-bottom: 0;
+}
+
+.media-item {
+    display: flex;
+    align-items: center; /* Aligns items at the start vertically */
+    text-align: left; /* Align text to the left */
+    margin: 20px; /* Space around each media item */
+    font-size: 1.2em; /* Adjust font size as needed */
+    margin-bottom: 0;
+}
+
+.media-item i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.5em; /* Adjust icon size as needed */
+    
+}
+
+
+.elmocontainer {
+    width: 100%; /* Ensure it takes full width */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    margin-top: 5px; /* Space above the image */
+}
+
+/* Style for the image at the bottom of the media section */
+.bottomelmo {
+    max-width: 100px; /* Limit the maximum width of the image */
+    height: auto; /* Maintain the aspect ratio */
+}
