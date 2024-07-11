@@ -182,6 +182,9 @@
     transform: translateY(-50%);
 }
 
+/*School Section ----------------------------------------------------------*/
+
+
 .school-section {
     width: 100%; /* Adjust the width of each column */
     display: flex;
@@ -205,12 +208,13 @@
     height: auto;
 }
 
-.school-column h3 {
+.school-column a {
     color: white;
     font-size: 50px;
     font-family: 'Saira Extra Condensed', sans-serif;
     font-weight: 400;
     margin: 0;
+    text-decoration: none;
 }
 
 .school-column p {
@@ -220,4 +224,55 @@
     font-weight: 300;
     margin-top: 10px;
     margin-bottom: 30px;
+}
+
+/* Coundown ----------------------------------------------------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.countdown-container {
+    position: relative;
+    width: 100%;
+    height: 89vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 0;
+}
+
+.countdown-container h2 {
+    font-family: 'Saira Extra Condensed', sans-serif;   
+    font-size: 7em;
+    color: white;
+    position: absolute; /* Absolute positioning for the text */
+    top: -50px; /* Adjust top position as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Maintain aspect ratio, cover entire container */  
+}
+
+.countdown {
+    background-color: rgba(255, 255, 255, 0.3); /* Opaklığı düşük bir arka plan */
+    border-radius: 15px; /* Kenarları yuvarlak dikdörtgen */
+    padding: 20px;
+    font-size: 10em;
+    text-align: center;
+    z-index: 1; /* İçeriğin ön planda kalmasını sağlar */
+    font-family: 'Iceland', sans-serif;
 }

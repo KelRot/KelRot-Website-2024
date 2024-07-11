@@ -37,5 +37,28 @@ function changeSlide(n) {
     showSlides(slideIndex += n);
 }
 
-/* FIX THE FUCKING ARROWS AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AND ALSO THE DAMN PICTURES*/
+/* FIX THE FUCKING ARROWS AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
+
+// Countdown timer JavaScript code
+const targetDate = new Date("January 4, 2025 00:00:00").getTime();
+
+const countdownElement = document.getElementById('countdown');
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    countdownElement.innerHTML = `${days} : ${hours} : ${minutes}`;
+
+    if (distance < 0) {
+        clearInterval(countdownInterval);
+        countdownElement.innerHTML = "SEZON BAŞLADI";
+    }
+}
+
+updateCountdown();
+const countdownInterval = setInterval(updateCountdown, 60000); //
