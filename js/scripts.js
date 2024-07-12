@@ -10,7 +10,7 @@ function closeNav() {
   console.log("closed")
 }
 
-/* SLIDESHOW --------------------------------------STILL NOT PROPER----------------------------------------*/
+/* SLIDESHOW --------------------------------------STILL NOT PROPER----------------------------------------
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -64,31 +64,39 @@ document.querySelector('.slideshow-container').addEventListener('mouseout', func
 function resetInterval() {
   clearInterval(slideInterval);
   slideInterval = setInterval(autoSlides, 4000);
-}
+}*/
 
 // COUNTDOWN TIMER ------------------------------------------------------------------------
-const targetDate = new Date("January 4, 2025 00:00:00").getTime();
+document.addEventListener("DOMContentLoaded", function() {
+  const targetDate = new Date("January 4, 2025 00:00:00").getTime();
+  const countdownElement = document.getElementById('countdown');
 
-const countdownElement = document.getElementById('countdown');
+  // Check if the countdown element exists
+  if (countdownElement) {
+      function updateCountdown() {
+          const now = new Date().getTime();
+          const distance = targetDate - now;
 
-function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          countdownElement.innerHTML = `${days} : ${hours} : ${minutes}`;
 
-    countdownElement.innerHTML = `${days} : ${hours} : ${minutes}`;
+          if (distance < 0) {
+              clearInterval(countdownInterval);
+              countdownElement.innerHTML = "SEZON BAŞLADI";
+          }
+      }
 
-    if (distance < 0) {
-        clearInterval(countdownInterval);
-        countdownElement.innerHTML = "SEZON BAŞLADI";
-    }
-}
+      // Initial call to display countdown immediately
+      updateCountdown();
+      const countdownInterval = setInterval(updateCountdown, 60000);
+  } else {
+      console.warn("Countdown element not found, countdown script will not run.");
+  }
+});
 
-updateCountdown();
-const countdownInterval = setInterval(updateCountdown, 60000); 
 
 //MAIL COPY TO CLIPBOARD -------------------------------------------------------------------
 
@@ -104,4 +112,21 @@ function copyToClipboard(text) {
   document.body.removeChild(textarea);
   // Optional: Alert the user that the text has been copied
   alert("Mail adresi panoya kopyalandı: " + text);
+}
+
+//SEASONS COLLAPSIBLES ------------------------------------------------------------------------
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
 }

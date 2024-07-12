@@ -1,0 +1,81 @@
+.collapsible {
+    background-color: #777;
+    color: #ededed;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border-radius: 8px;
+    text-align: left;
+    outline: none;
+    font-size: 60px;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 400;
+    margin-top: 70px;
+    border: none;
+}
+
+.active, .collapsible:hover {
+    background-color: #ccc;
+  }
+
+.active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.content {
+    padding: 0 18px;
+    background-color: #ccc;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+.options {
+    display: flex;
+    justify-content: center; /* Elemanları yatayda ortalar */
+    align-items: flex-start; /* Elemanları dikeyde üstte hizalar */
+    gap: 90px; /* Elemanlar arasındaki boşluk */
+}
+
+.option-item {
+    text-align: center;
+}
+
+.option-item img {
+    display: block;
+    margin: 0 auto; /* Resmin ortalanması */
+    width: 100px; /* İstediğiniz genişliği ayarlayabilirsiniz */
+    height: auto; /* Yüksekliğin otomatik ayarlanması */
+}
+
+.option-item p {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.media-section {
+    display: flex;
+    align-items: center; /* Dikey ortalama */
+    justify-content: space-between; /* İki sütunu aralıklı yerleştirme */
+    gap: 20px; /* İki sütun arasındaki boşluk */
+    background-color: #777;
+}
+
+.season-logo,
+.video {
+    flex: 1; /* Her iki elemanın da eşit genişlikte olmasını sağlar */
+}
+
+.season-logo img,
+.video video {
+    width: 50%; /* Elemanların sütun genişliğini doldurması */
+    height: auto; /* Yüksekliğin otomatik ayarlanması */
+    margin: 60px;
+    margin-left: 30%;
+    
+    
+}
