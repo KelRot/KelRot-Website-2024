@@ -10,7 +10,7 @@ function closeNav() {
   console.log("closed")
 }
 
-/* SLIDESHOW ------------------------------------------------------------------------------*/
+/* SLIDESHOW --------------------------------------STILL NOT PROPER----------------------------------------*/
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -66,7 +66,7 @@ function resetInterval() {
   slideInterval = setInterval(autoSlides, 4000);
 }
 
-// Countdown timer JavaScript code ------------------------------------------------------------------------
+// COUNTDOWN TIMER ------------------------------------------------------------------------
 const targetDate = new Date("January 4, 2025 00:00:00").getTime();
 
 const countdownElement = document.getElementById('countdown');
@@ -88,4 +88,20 @@ function updateCountdown() {
 }
 
 updateCountdown();
-const countdownInterval = setInterval(updateCountdown, 60000); //
+const countdownInterval = setInterval(updateCountdown, 60000); 
+
+//MAIL COPY TO CLIPBOARD -------------------------------------------------------------------
+
+function copyToClipboard(text) {
+  // Create a temporary textarea element
+  var textarea = document.createElement("textarea");
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+  // Copy the text inside the textarea to the clipboard
+  document.execCommand("copy");
+  // Remove the temporary textarea element
+  document.body.removeChild(textarea);
+  // Optional: Alert the user that the text has been copied
+  alert("Mail adresi panoya kopyalandı: " + text);
+}

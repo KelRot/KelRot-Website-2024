@@ -143,38 +143,122 @@ body, html {
 
 }
 
-.media-item-text{
-    display: block;
-}
-
-.media-item-text p{
-    margin: 0;
-    margin-bottom: 5px;
-    margin-left: 15px
-}
-
 .items {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allow items to wrap if needed */
-    gap: 60px; /* Space between media items */
-    margin-bottom: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.bottom-column {
+    flex: 1;
+    margin: 10px;
 }
 
 .media-item {
     display: flex;
-    align-items: center; /* Aligns items at the start vertically */
-    text-align: left; /* Align text to the left */
-    margin: 20px; /* Space around each media item */
-    font-size: 1.2em; /* Adjust font size as needed */
-    margin-bottom: 0;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 230px;
 }
 
-.media-item i {
-    margin-right: 10px; /* Space between icon and text */
-    font-size: 1.5em; /* Adjust icon size as needed */
-    
+.media-item img {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
 }
+
+.media-item-text p {
+    margin: 0;
+    text-align: left;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+;
+}
+
+.copyable-text {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.copyable-text::after {
+    content: "Panoya kopyalamak için tıklayın";
+    font-size: 15px;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 400;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #777777;
+    color: #fff;
+    padding: 3px;
+    border-radius: 5px;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.copyable-text:hover::after {
+    opacity: 1;
+}
+
+
+.text-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.text-item a:hover {
+    color: #ac1b1a;
+    background-color: #dedede;
+    border-radius: 2px;
+}
+
+.text-item a {
+    color: #ac1b1a;
+    font-size: 18px;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 500;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 100px;
+}
+
+.social-media a:last-child {
+    margin-right: 0;
+}
+
+.custom-icon {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    transition: filter 0.2s ease;
+}
+
+.custom-icon:hover {
+    filter: invert(100%);
+}
+
+.bottom-column .social-media {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.bottom-column .social-media a {
+    width: calc(33.33% - 20px); /* Three items per row with margin */
+    margin: 5px;
+    text-align: center;
+}
+
+
 
 
 .elmocontainer {
