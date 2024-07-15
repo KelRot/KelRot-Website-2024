@@ -1,15 +1,11 @@
 body {
-    font-family: 'Saira Extra Condensed', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #cccccc;
-    margin-top: 45px;
+    background-color: #d9d9d9;
 }
 
 .sponsors-section {
     padding: 20px;
     text-align: center;
+    margin-top: 45px;
 }
 
 .section-header {
@@ -39,12 +35,12 @@ body {
 
 .section-header .red-stripe:first-child {
     left: 0;
-    width: 80px;
+    width: 8%;
 }
 
 .section-header .red-stripe:last-child {
     right: 0;
-    width: 970px;
+    width: 51%;
 }
 
 .logos-container {
@@ -66,9 +62,9 @@ body {
     width: 150px;
     height: auto;
     object-fit: contain;    
-    border: 1px solid #ccc;
+    border: 1px solid #d9d9d9;
     padding: 10px;
-    background-color: #ccc;
+    background-color: #d9d9d9;
 }
 
 .thank-you {

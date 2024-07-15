@@ -1,10 +1,17 @@
 /*BODY ---------------------------------------------------------------------------- */
-body, html {
-    margin: 0;
+body {
     padding: 0;
     font-family: 'Saira Extra Condensed',sans-serif;
-    background-color: #080808;
+    background-color: #ffffff;
+    width: 70%;
+    margin: 0 auto;
+    box-sizing: border-box;
     
+}
+
+html {
+    height: 100%;
+    background-color: #212121;
 }
 
 /*NAVIGATION -----------------------------------------------------------------------*/
@@ -16,7 +23,7 @@ body, html {
     justify-content: flex-end;
     position: fixed;
     top:0;
-    width: 100%;
+    width: inherit;
     z-index: 5;
 }
 
@@ -69,7 +76,7 @@ body, html {
 
 
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1000px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;

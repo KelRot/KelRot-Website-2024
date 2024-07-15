@@ -136,7 +136,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 60px;
-    background-color: #272727;
+    background-color: #434343;
 
 }
 .column {
@@ -184,7 +184,7 @@
 
 .black-divider {
     height: 40px;
-    width: 100%;
+    width: inherit;
     background-color: black;
     position: absolute;
     transform: translateY(-50%);
@@ -236,16 +236,11 @@
 
 /* Coundown ----------------------------------------------------------------*/
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
 
 .countdown-container {
     position: relative;
     width: 100%;
-    height: 89vh; /* Full viewport height */
+    height: 50vh; /* Full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -256,7 +251,7 @@ body {
 
 .countdown-container h2 {
     font-family: 'Saira Extra Condensed', sans-serif;   
-    font-size: 7em;
+    font-size: 4.4em;
     color: white;
     position: absolute; /* Absolute positioning for the text */
     top: -50px; /* Adjust top position as needed */
@@ -279,7 +274,8 @@ body {
     background-color: rgba(255, 255, 255, 0.3); /* Opaklığı düşük bir arka plan */
     border-radius: 15px; /* Kenarları yuvarlak dikdörtgen */
     padding: 20px;
-    font-size: 10em;
+    margin-top: 40px;
+    font-size: 6em;
     text-align: center;
     z-index: 1; /* İçeriğin ön planda kalmasını sağlar */
     font-family: 'Iceland', sans-serif;
