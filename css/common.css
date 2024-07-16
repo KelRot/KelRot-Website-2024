@@ -280,3 +280,28 @@ html {
     max-width: 100px; /* Limit the maximum width of the image */
     height: auto; /* Maintain the aspect ratio */
 }
+
+@media (max-width: 1000px) {
+    .items {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .bottom-column {
+        margin: 10px 0; /* Reduce margin for bottom columns */
+    }
+
+    .media-item {
+        margin-left: 0; /* Remove left margin for media items */
+        justify-content: center; /* Center align items */
+    }
+
+    .social-media {
+        margin-right: 0; /* Remove right margin for social media */
+        flex-wrap: wrap; /* Allow wrapping of items */
+    }
+
+    .social-media a {
+        margin: 10px; /* Add margin for spacing */
+    }
+}

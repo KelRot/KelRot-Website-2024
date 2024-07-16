@@ -10,7 +10,7 @@ function closeNav() {
   console.log("closed")
 }
 
-/* SLIDESHOW --------------------------------------STILL NOT PROPER----------------------------------------
+/* SLIDESHOW --------------------------------------DONE I THINK?----------------------------------------*/
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -50,21 +50,11 @@ function autoSlides() {
 // Set the interval for the automatic slideshow
 let slideInterval = setInterval(autoSlides, 4000);
 
-// Pause the automatic slideshow on mouseover
-document.querySelector('.slideshow-container').addEventListener('mouseover', function() {
-  clearInterval(slideInterval);
-});
-
-// Resume the automatic slideshow on mouseout
-document.querySelector('.slideshow-container').addEventListener('mouseout', function() {
-  slideInterval = setInterval(autoSlides, 4000);
-});
-
 // Reset the interval for manual controls
 function resetInterval() {
   clearInterval(slideInterval);
   slideInterval = setInterval(autoSlides, 4000);
-}*/
+}
 
 // COUNTDOWN TIMER ------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function() {

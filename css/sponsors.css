@@ -8,40 +8,45 @@ body {
     margin-top: 45px;
 }
 
+/* Section header */
 .section-header {
     display: flex;
-    align-items: left;
-    justify-content: left;
-    margin-bottom: 20px;
+    align-items: center; /* Merkezde hizalama */
+    justify-content: space-between; /* Alanı eşit dağıt */
     position: relative;
 }
 
+/* Header title */
 .section-header h2 {
     margin: 0 20px;
     font-size: 3.5em;
     color: #333;
-    margin-left: 100px;
-    z-index: 1;
+    z-index: 1; /* Başlığın üstte kalmasını sağla */
+    white-space: nowrap; /* Başlığın tek satırda kalmasını sağlar */
 }
 
+/* Red stripes */
 .red-stripe {
     height: 15px;
-    width: 10px;
     background-color: #a53c3b;
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 0;
+    margin-top: 15px;
 }
 
-.section-header .red-stripe:first-child {
-    left: 0;
-    width: 8%;
+/* Left stripe */
+.left-stripe {
+    width: calc(50% - 10px); /* Başlığın yanına kadar uzanacak şekilde */
 }
 
-.section-header .red-stripe:last-child {
-    right: 0;
-    width: 51%;
+/* Right stripe */
+.right-stripe {
+    width: calc(50% - 10px); /* Başlığın yanına kadar uzanacak şekilde */
 }
+
+
 
 .logos-container {
     display: flex;
