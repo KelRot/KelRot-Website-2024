@@ -13,18 +13,6 @@
     z-index: 1;
 }
 
-/*.about-header::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background: white;
-    clip-path: polygon(0 100%, 10% 0, 20% 100%, 30% 0, 40% 100%, 50% 0, 60% 100%, 70% 0, 80% 100%, 90% 0, 100% 100%);
-    z-index: -1;
-}*/
-
 .about-header h1 {
     font-family: 'Saira Extra Condensed', sans-serif;
     font-size: 3em;
@@ -53,17 +41,7 @@
     z-index: 1;
 }
 
-/*.about-middle::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background: #d9d9d9;
-    clip-path: polygon(0 100%, 10% 0, 20% 100%, 30% 0, 40% 100%, 50% 0, 60% 100%, 70% 0, 80% 100%, 90% 0, 100% 100%);
-    z-index: -1;
-}*/
+
 
 .about-middle .column {
     background-color: #d9d9d9;
@@ -104,18 +82,6 @@
     z-index: 1;
 }
 
-/*.about-bottom::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background: #ffffff;
-    clip-path: polygon(0 0%, 10% 100%, 20% 0%, 30% 100%, 40% 0%, 50% 100%, 60% 0%, 70% 100%, 80% 0%, 90% 100%, 100% 0%);
-    z-index: -1;
-}*/
-
 .bottom-content {
     display: flex;
     align-items: center;
@@ -145,3 +111,68 @@
     margin: 50px;
     font-weight: 300;
 }
+
+/*----MOBİL-----------------------------------------------------------------------*/
+
+
+@media (max-width: 768px) { 
+
+    .about-header {
+        text-align: center;
+    }
+    .about-header h1 {
+        margin-left: auto;
+    }
+
+    /*------------------------------------------------------------*/
+    .about-middle {
+      flex-direction: column; 
+    }
+  
+    .about-middle .column {
+      width: 100%; /* Her sütunun genişliği tam olur */
+      margin: 10px 0; /* Üst ve alt boşluk ekler */
+      padding: 15px; /* Daha dar padding */
+    }
+  
+    .about-middle p {
+      margin-left: 20px; /* Soldan boşluk azaltılır */
+      margin-right: 20px; /* Sağdan boşluk azaltılır */
+      font-size: 0.9em; /* Mobilde yazı boyutu küçültülür */
+    }
+  
+    .about-middle h2 {
+      font-size: 2.5em; /* Başlık boyutunu biraz küçültür */
+    }
+
+/*-----------------------------------------------------------------*/
+
+
+    .bottom-content {
+        flex-direction: column; /* İçerikleri alt alta getirir */
+        align-items: center; /* Ortalar */
+        text-align: center; /* Metni ortalar */
+        gap: 20px; /* Öğeler arasında boşluk ekler */
+      }
+    
+      .about-img {
+        order: 2; /* Resmi en alta alır */
+        transform: rotate(0deg); /* Mobilde dönüşü iptal eder */
+        width: 80%; /* Resmin genişliğini ayarlar */
+        max-width: 300px; /* Çok büyük ekranda genişliği sınırlandırır */
+        margin-bottom: 10px; /* Alt boşluk ekler */
+      }
+    
+      .bottom-content h2 {
+        order: 1; /* Başlığı en üste alır */
+        font-size: 2.5em; /* Mobilde başlık boyutunu küçültür */
+      }
+    
+      .about-bottom p {
+        order: 3; /* Paragrafı başlığın ve resmin altına alır */
+        margin: 10px 20px; /* Yanlardan boşluk azaltılır */
+        text-align: center;
+      }
+
+
+  }

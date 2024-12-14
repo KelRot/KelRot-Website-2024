@@ -3,7 +3,7 @@ body {
 }
 
 .sponsors-section {
-    padding: 20px;
+    
     text-align: center;
     margin-top: 45px;
 }
@@ -14,6 +14,7 @@ body {
     align-items: center; /* Merkezde hizalama */
     justify-content: space-between; /* Alanı eşit dağıt */
     position: relative;
+    padding: 20px;
 }
 
 /* Header title */
@@ -24,6 +25,145 @@ body {
     z-index: 1; /* Başlığın üstte kalmasını sağla */
     white-space: nowrap; /* Başlığın tek satırda kalmasını sağlar */
 }
+
+
+/* Paketler Kısmı -----------------------------------------------------------------------*/
+
+.sponsor-category {
+    margin-bottom: 150px;
+    position: relative;
+    
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-left: 0;
+}
+
+/* Sol taraftaki renkli dikdörtgenler */
+.category-label {
+    width: 60px;
+    height: 50px;
+    margin-left: 0;
+}
+
+.category-header h2 {
+    font-size: 2em;
+    margin: 0;
+    color: #333;
+    margin-left: 70px;
+}
+
+.gold-cat .category-header {
+    justify-content: flex-start; /* Sol hizalama */
+}
+.gold-label {
+    background-color: #C0A736; /* Altın rengi */
+}
+
+
+
+.silver-cat .category-header {
+    justify-content: flex-end; /* Sağ hizalama */
+    box-sizing: border-box; /* Padding, genişliğe dahil edilir */
+}
+.silver-label {
+    background-color: #AAA9AD; /* Gümüş rengi */
+}
+.silver-label h2 {
+    margin-left: -150px;
+}
+
+
+.bronze-cat .category-header {
+    justify-content: flex-start; /* Sol hizalama */
+}
+.bronze-label {
+    background-color: #CD7F32; /* Bronz rengi */
+}
+
+/* Başlıklar */
+
+
+
+/* Logolar */
+.logo-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    transition: transform 0.5s ease-out,opacity 0.3s ease;
+    overflow: hidden;
+}
+
+.logo-cont.move-right {
+    transform: translateX(100%); /* Logolar sağa kayacak */
+    opacity: 0;
+    
+}
+
+.logo-cont img {
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.info-box {
+    padding: 0px;
+    border-radius: 10px;
+    position:absolute;
+    top: 55px;
+    left: 0;
+    transform: translateX(-100%, 0);
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.5s ease ;
+    visibility: hidden;
+    opacity: 0;
+    padding-bottom: 30px;
+    
+}
+
+.info-box.open {
+    display: block;
+    transform: translateX(10%); /* Kayma animasyonu */
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Altın Sponsorlar için Info Box Rengi */
+.gold-cat .info-box.open {
+    background-color: rgba(193, 167, 54, 0.15); /* Altın rengi */
+    color: #000;
+}
+
+/* Gümüş Sponsorlar için Info Box Rengi */
+.silver-cat .info-box.open {
+    background-color: rgba(192, 192, 192, 0.9); /* Gümüş rengi */
+    color: #000;
+}
+
+/* Bronz Sponsorlar için Info Box Rengi */
+.bronze-cat .info-box.open {
+    background-color: rgba(205, 127, 50, 0.9); /* Bronz rengi */
+    color: #000;
+
+}
+
+/* İçerik yazıları */
+.info-box p {
+    font-size: 1.5em;
+    margin: 0;
+    line-height: 1.6;
+    white-space: pre-line; /* Metni düzgün şekilde kır */
+}
+
+/*----------------------------------------------------------------------------------------------*/
 
 /* Red stripes */
 .red-stripe {

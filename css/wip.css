@@ -23,3 +23,11 @@
     font-size: 22px;
     color: #666666;
 }
+
+@media (max-width:800px) {
+
+    .container img {
+        width:300px
+    }
+    
+}

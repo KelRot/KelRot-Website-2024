@@ -2,7 +2,6 @@
 body {
     padding: 0;
     font-family: 'Saira Extra Condensed',sans-serif;
-    background-color: #ffffff;
     width: 70%;
     margin: 0 auto;
     box-sizing: border-box;
@@ -76,12 +75,26 @@ html {
 
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
+
+
+    body {
+        width: 100%; /* Body genişliğini tam ekran yap */
+        margin: 0; /* Kenarlardaki boşlukları kaldır */
+        padding: 0; /* İç boşlukları kaldır */
+      }
+      .top-nav, .content-container, .slideshow-container { 
+        width: 100%; /* Diğer önemli konteynerlerin genişliğini tam ekran yap */
+        margin: 0; /* Dış boşlukları kaldır */
+        padding: 0; /* İç boşlukları kaldır */
+      }
+
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
       display: block;
     }
+
 }
 
 /*CURTAIN MENU */
@@ -90,7 +103,7 @@ html {
     height: 100%;
     width: 0;
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 2; /* Sit on top */
     left: 0;
     top: 0;
     background-color: rgb(0,0,0); /* Black fallback color */
@@ -101,7 +114,7 @@ html {
 
 .overlayContent {
     position: relative;
-    top: 25%;
+    top: 15%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
@@ -111,7 +124,7 @@ html {
 .overlay a {
     padding: 8px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 30px;
     color: #838383;
     display: block; /* Display block instead of inline */
     transition: 0.3s;    
@@ -140,6 +153,9 @@ html {
 
 
 /*BOTTOM SECTION*/
+
+
+
 .bottom {
     text-align: center;
     background-color: #ededed; /* Background color of the media section */
@@ -166,7 +182,7 @@ html {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    margin-left: 230px;
+    margin-left: 100px;
 }
 
 .media-item img {
@@ -281,27 +297,24 @@ html {
     height: auto; /* Maintain the aspect ratio */
 }
 
-@media (max-width: 1000px) {
-    .items {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center;
+@media (max-width: 800px) {
+    .items { 
+        display: flex; /* Eğer flex kullanıyorsan */
+        flex-direction: column; /* Sütunları alt alta sıralar */
+        text-align: center; /* İçeriği ortalamak istersen */
+    }
+    
+    .bottom-column { 
+        width: 100%; /* Sütunların genişliğini tam ekran yap */
+        margin-bottom: 20px; /* Sütunlar arasına boşluk ekler */
     }
 
-    .bottom-column {
-        margin: 10px 0; /* Reduce margin for bottom columns */
+    .bottom-column .social-media {
+        margin-right: -1px;
     }
 
     .media-item {
-        margin-left: 0; /* Remove left margin for media items */
-        justify-content: center; /* Center align items */
+        margin-right: 25px;
     }
-
-    .social-media {
-        margin-right: 0; /* Remove right margin for social media */
-        flex-wrap: wrap; /* Allow wrapping of items */
-    }
-
-    .social-media a {
-        margin: 10px; /* Add margin for spacing */
-    }
+      
 }
