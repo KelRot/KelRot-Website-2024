@@ -82,17 +82,24 @@ html {
         width: 100%; /* Body genişliğini tam ekran yap */
         margin: 0; /* Kenarlardaki boşlukları kaldır */
         padding: 0; /* İç boşlukları kaldır */
-      }
-      .top-nav, .content-container, .slideshow-container { 
-        width: 100%; /* Diğer önemli konteynerlerin genişliğini tam ekran yap */
-        margin: 0; /* Dış boşlukları kaldır */
-        padding: 0; /* İç boşlukları kaldır */
-      }
+        overflow-x: hidden;
+    }
+    html {
+        overflow-x: hidden;
+    }
+    .top-nav, .content-container, .slideshow-container { 
+    width: 100%; /* Diğer önemli konteynerlerin genişliğini tam ekran yap */
+    margin: 0; /* Dış boşlukları kaldır */
+    padding: 0; /* İç boşlukları kaldır */
+    }
 
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
-      float: right;
-      display: block;
+        float: right;
+        display: block;   
+        box-sizing: border-box; /* Padding ve border genişliğe dahil edilir */
+        margin: 0;
+        padding: 15px;
     }
 
 }
@@ -315,6 +322,14 @@ html {
 
     .media-item {
         margin-right: 25px;
+    }
+
+    .bottomelmo {
+        display: block; /* Mobilde görünmesini sağlar */
+        width: 30%; /* Resmi ekran genişliğine yayar */
+        max-width: 300px; /* Maksimum genişlik belirler */
+        margin: 20px auto; /* Ortalar ve yukarıdan boşluk ekler */
+        margin-bottom: 80px;
     }
       
 }

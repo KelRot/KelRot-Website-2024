@@ -84,6 +84,10 @@ body {
     background-color: #CD7F32; /* Bronz rengi */
 }
 
+.bronze-cat {
+    margin-top: -200px;
+}
+
 /* Başlıklar */
 
 
@@ -221,4 +225,26 @@ body {
     font-size: 3em;
     margin-top: 40px;
     font-weight: 600;
+}
+
+
+@media (max-width:800px) {
+
+    .logo-cont img {
+        width: 60%;
+    }
+
+    .logo-row {
+        flex-wrap: wrap; /* Logolar alt alta geçebilir */
+        gap: 20px; /* Aralarındaki boşluğu azalt */
+    }
+
+    .logo-row img {
+        width: calc(35% - 20px); /* Her satıra 2 logo olacak şekilde genişliği ayarla */
+    }
+
+    .section-header h2{
+        font-size: 2.5em;
+    }
+
 }
